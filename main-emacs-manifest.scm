@@ -4,6 +4,7 @@
    "sqlite"
    "gcc-toolchain"
    "glibc-locales"
+   "coreutils"
    "rubber"
    "automake"
    "make"
