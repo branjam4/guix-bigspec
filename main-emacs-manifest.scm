@@ -13,7 +13,7 @@
    "zlib"
    "guile"
    "emacs-guix"
-   "emacs-next"
+   "emacs"
    "emacs-geiser"
    "git"
    "ripgrep"
