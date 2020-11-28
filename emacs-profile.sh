@@ -25,12 +25,12 @@ printf "#+END_EXAMPLE\n** =bashrc= checks\n"
 printf "+ ensure ~GUIX_EXTRA_PROFILES~ variable in =bashrc=\n"
 printf "Ensuring proper shell environment...\n"
 if ! grep -qF "GUIX_EXTRA_PROFILES=\"\$HOME\"/.guix-extra-profiles" "$HOME/.bashrc"; then
-    printf "GUIX_EXTRA_PROFILES=\"\$HOME\"/.guix-extra-profiles" >> "$HOME/.bashrc"
+    printf "GUIX_EXTRA_PROFILES=\"\$HOME\"/.guix-extra-profiles\n" >> "$HOME/.bashrc"
 fi
 
 printf "+ ensure direnv hook exists for activating project dependencies\n"
 if ! grep -qF "eval \"\$(direnv hook bash)\"" "$HOME/.bashrc"; then
-    printf "eval \"\$(direnv hook bash)\"" >> "$HOME/.bashrc"
+    printf "eval \"\$(direnv hook bash)\"\n" >> "$HOME/.bashrc"
 fi
 
 printf "+ activate =main-emacs= profile\n"
@@ -42,7 +42,7 @@ if ! grep -qF \
 fi
 
 if ! grep -qF "source \"\$GUIX_EMACS_PROFILE\"/etc/profile" "$HOME/.bashrc"; then
-    printf "source \"\$GUIX_EMACS_PROFILE\"/etc/profile" >> "$HOME/.bashrc"
+    printf "source \"\$GUIX_EMACS_PROFILE\"/etc/profile\n" >> "$HOME/.bashrc"
 fi
 
 source "$GUIX_EMACS_PROFILE"/etc/profile
