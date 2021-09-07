@@ -1,3 +1,4 @@
 (specifications->manifest
  '("emacs-debbugs"
-   "emacs-debpaste"))
+   "emacs-debpaste"
+   "emacs-recutils"))

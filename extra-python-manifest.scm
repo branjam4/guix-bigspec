@@ -1,7 +1,11 @@
 (specifications->manifest
  '("python"
    "python-matplotlib"
+   "ungoogled-chromium"
+   "python-selenium"
    "python-pandas"
    "visidata"
+   "datamash"
+   "recutils"
    "python-tabulate"
    "python-openpyxl"))
