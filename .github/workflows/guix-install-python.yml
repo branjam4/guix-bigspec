@@ -26,7 +26,7 @@ jobs:
         run: guix pack --relocatable --save-provenance --root=hello.tar.bz2 --compression=bzip2 hello
       # Create a docker image
       - name: Pack (Docker)
-        run: guix pack --save-provenance --format=docker -m $GITHUB_WORKSPACE/python-manifest.scm -m $GITHUB_WORKSPACE/extra-python-manifest.scm
+        run: guix pack --save-provenance --format=docker --root=python.tar.gz -m $GITHUB_WORKSPACE/python-manifest.scm -m $GITHUB_WORKSPACE/extra-python-manifest.scm
       # Upload all artifacts
       - name: Upload pack (Relocatable Binary)
         uses: actions/upload-artifact@v2
@@ -37,4 +37,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: hello Docker image
-          path: '*.tar.gz'
+          path: 'python.tar.gz'
