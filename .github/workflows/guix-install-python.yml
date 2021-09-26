@@ -37,4 +37,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: hello Docker image
-          path: *.tar.gz
+          path: '*.tar.gz'
