@@ -1,0 +1,40 @@
+name: test
+on: [push]
+jobs:
+  build:
+    name: Test Guix installation
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - name: Guix cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/guix
+          # use a key that (almost) never matches
+          key: guix-cache-${{ github.sha }}
+          restore-keys: |
+            guix-cache-
+      # Cannot use a cache for /gnu/store, since restore fails
+      - name: Install Guix
+        uses: PromyLOPh/guix-install-action@v1
+      - name: Ensure no locale warning
+        run: test -z "$(guix --version 2>&1 >/dev/null)"
+      # Pack independent binary
+      - name: Pack (Relocatable Binary)
+        run: guix pack --relocatable --save-provenance --root=hello.tar.bz2 --compression=bzip2 hello
+      # Create a docker image
+      - name: Pack (Docker)
+        run: guix pack --save-provenance --format=docker -m $GITHUB_WORKSPACE/python-manifest.scm -m $GITHUB_WORKSPACE/extra-python-manifest.scm
+      # Upload all artifacts
+      - name: Upload pack (Relocatable Binary)
+        uses: actions/upload-artifact@v2
+        with:
+          name: hello Relocatable Binary
+          path: hello.tar.bz2
+      - name: Upload pack (Docker)
+        uses: actions/upload-artifact@v2
+        with:
+          name: hello Docker image
+          path: *.tar.gz
