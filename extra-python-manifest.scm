@@ -3,6 +3,7 @@
    "python-matplotlib"
    "ungoogled-chromium"
    "python-selenium"
+   "python-lsp-server"
    "python-pandas"
    "visidata"
    "datamash"
