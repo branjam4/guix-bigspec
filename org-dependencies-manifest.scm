@@ -4,7 +4,6 @@
    "wget"
    "gnuplot"
    "ghc-pandoc"
-   "ghc-pandoc-citeproc"
    "emacs-pdf-tools"
    "texlive"
    "nss-certs"))

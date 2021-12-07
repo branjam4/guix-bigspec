@@ -2,5 +2,4 @@
  '("emacs-matrix-client"
    "emacs-crdt"
    "miredo"
-   "emacs-hyperbole"
-   ))
+   "emacs-hyperbole"))
