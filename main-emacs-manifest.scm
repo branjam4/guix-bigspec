@@ -13,7 +13,7 @@
    "zlib"
    "guile"
    "emacs-guix"
-   "emacs"
+   "emacs-next"
    "emacs-geiser"
    "git"
    "ripgrep"
@@ -23,7 +23,6 @@
    "shellcheck"
    "poppler"
    "imagemagick"
-   "guix"
    "gnupg"
    "emacs-graphviz-dot-mode"
    "nss-certs"))
