@@ -1,9 +1,10 @@
 (specifications->manifest
- '("emacs-matrix-client"
+ '("emacs-ement"
    "emacs-crdt"
    "emacs-elpher"
    "emacs-org-pandoc-import"
    "emacs-suggest"
    "emacs-ts"
    "miredo"
+   "man-db"
    "emacs-hyperbole"))
