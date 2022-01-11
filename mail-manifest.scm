@@ -1,4 +1,4 @@
 (specifications->manifest
  '("notmuch"
    "afew"
-   "offlineimap"))
+   "offlineimap3"))
