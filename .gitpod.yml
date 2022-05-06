@@ -6,9 +6,9 @@ ports:
   - port: 5900
     onOpen: ignore
 tasks:
-  - name: qevvnc
-    init: chmod +w /emacs-vm.qcow2
-    command: /opt/gnu/bin/qemu-system-x86_64 -enable-kvm -hda /emacs-vm.qcow2 -m 4000 -vnc :0
+  - name: qemu-vnc
+    init: sudo chmod +w /emacs-vm.qcow2
+    command: /home/gitpod/opt/gnu/bin/qemu-system-x86_64 -hda /emacs-vm.qcow2 -m 4000 -vnc :0
 github:
   prebuilds:
     branches: true
