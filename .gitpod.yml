@@ -8,7 +8,7 @@ ports:
 tasks:
   - name: qevvnc
     init: chmod +w /emacs-vm.qcow2
-    command: /opt/gnu/bin/qemu-system-x86_64 -enable-kvm -hda /tmp/emacs-vm.qcow2 -m 4000 -vnc :0
+    command: /opt/gnu/bin/qemu-system-x86_64 -enable-kvm -hda /emacs-vm.qcow2 -m 4000 -vnc :0
 github:
   prebuilds:
     branches: true
