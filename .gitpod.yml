@@ -1,0 +1,15 @@
+image: ghcr.io/branjam4/guixsd-config:master
+ports:
+  - port: 6080
+    onOpen: open-browser
+    visibility: public
+  - port: 5900
+    onOpen: ignore
+tasks:
+  - name: qevvnc
+    init: chmod +w /tmp/emacs-vm.qcow2
+    command: /opt/gnu/bin/qemu-system-x86_64 -enable-kvm -hda /tmp/emacs-vm.qcow2 -m 4000 -vnc :0
+github:
+  prebuilds:
+    branches: true
+    addBadge: true
