@@ -8,7 +8,7 @@ ports:
 tasks:
   - name: qemu-vnc
     #init: sudo /home/gitpod/opt/gnu/bin/qemu-system-x86_64 -hda /emacs-vm.qcow2 -m 4000 -vnc :0
-    command: /home/gitpod/opt/gnu/virt-manager
+    command: /home/gitpod/opt/gnu/bin/virt-manager
 github:
   prebuilds:
     branches: true
