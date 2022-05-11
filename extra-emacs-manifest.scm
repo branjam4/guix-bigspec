@@ -1,9 +1,11 @@
 (specifications->manifest
  '("emacs-ement"
    "emacs-crdt"
+   "emacs-dtache"
    "emacs-elpher"
    "emacs-org-pandoc-import"
    "emacs-suggest"
+   "emacs-ledger-mode"
    "emacs-ts"
    "miredo"
    "man-db"
