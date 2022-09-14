@@ -5,14 +5,12 @@
 ;; See the "Replicating Guix" section in the manual.
 
 (specifications->manifest
-  (list "emacs-gdscript-mode"
-        "godot"
-        "emacs-imenu-list"
+  (list "emacs-imenu-list"
         "emacs-anzu"
         "emacs-detached"
-        "guile"
-        "emacs-geiser"
+        "emacs-crdt"
+        "emacs-lispy"
+	"emacs-org-ql"
         "emacs-god-mode"
         "emacs-use-package"
-        "emacs-guix"
         "emacs-next"))
