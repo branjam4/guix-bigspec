@@ -4,4 +4,6 @@
    "python-pyflakes"
    "python-isort"
    "python-pytest"
+   "python-lsp-jsonrpc"
+   "python-lsp-server"
    "python-wrapper"))

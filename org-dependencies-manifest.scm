@@ -5,5 +5,7 @@
    "gnuplot"
    "ghc-pandoc"
    "emacs-pdf-tools"
+   "emacs-org-contrib"
+   "ruby-taskjuggler"
    "texlive"
    "nss-certs"))

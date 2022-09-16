@@ -1,14 +1,14 @@
 (specifications->manifest
  '("tar"
    "libvterm"
-   "sqlite"
+   ;; "sqlite"
    "coreutils"
    "rubber"
    "libpng"
    "zlib"
    "guile"
    "emacs-guix"
-   "emacs-next"
+   "emacs"
    "emacs-geiser"
    "git"
    "ripgrep"
@@ -18,5 +18,6 @@
    "poppler"
    "imagemagick"
    "gnupg"
+   "curl"
    "emacs-graphviz-dot-mode"
    "nss-certs"))
